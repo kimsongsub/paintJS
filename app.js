@@ -73,11 +73,12 @@ function fillBgColor(event) {
   }
 }
 
+// canvas위에서 우클릭 방지
 // function handleRightClick(event) {
 //   event.preventDefault();
 // }
-// canvas위에서 우클릭 방지
 
+// a 태그를 가진 link라는 요소를 만들어서 그것을 클릭함으로써 download 기능이 실행되게 함.
 function saveCanvasImg(event) {
   const canvasImg = canvas.toDataURL("image/jpeg");
   const link = document.createElement("a");
@@ -85,8 +86,8 @@ function saveCanvasImg(event) {
   link.download = "PaintJs";
   link.click();
 }
-// a 태그를 가진 link라는 요소를 만들어서 그것을 클릭함으로써 download 기능이 실행되게 함.
 
+// if문을 통해서 Element를 받아오지 못 했을 때를 예외처리
 if (canvas) {
   canvas.addEventListener("mousemove", onMouseMove);
   canvas.addEventListener("mousedown", startPainting);
@@ -94,7 +95,6 @@ if (canvas) {
   canvas.addEventListener("mouseleave", stopPainting);
   // canvas.addEventListener("contextmenu", handleRightClick);
 }
-// if문을 통해서 Element를 받아오지 못 했을 때를 예외처리
 
 if (penColors) {
   penColors.addEventListener("click", handleColorClick);
