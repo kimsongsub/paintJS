@@ -14,12 +14,10 @@ canvas.height = 700;
 
 ctx.strokeStyle = "#2c2c2c";
 ctx.lineWidth = 2.5;
-// let bgColor = "#2c2c2c";
 let bgColor = "#2c2c2c";
 
 let painting = false;
 let filling = false;
-//전역변수로 선언이 괜찮은건지
 
 function startPainting(event) {
   if (!filling) {
@@ -72,11 +70,6 @@ function fillBgColor(event) {
     event.target.style.backgroundColor = bgColor;
   }
 }
-
-// canvas위에서 우클릭 방지
-// function handleRightClick(event) {
-//   event.preventDefault();
-// }
 
 // a 태그를 가진 link라는 요소를 만들어서 그것을 클릭함으로써 download 기능이 실행되게 함.
 function saveCanvasImg(event) {
