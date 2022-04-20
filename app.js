@@ -108,3 +108,10 @@ if (fillColors) {
 if (saveBtn) {
   saveBtn.addEventListener("click", saveCanvasImg);
 }
+
+for (let i = 0; i < 10; i++) {
+  setTimeout(() => {
+    console.log(i);
+  }, 3000);
+  // console.log(i);
+}
